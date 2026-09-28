@@ -1,0 +1,91 @@
+/* Komplex AI — Hallucination Check
+   Self-contained toast styling. All rules are !important and namespaced so
+   host-page CSS cannot bleed in, and the toast reads on light or dark pages. */
+
+.komplexai-toast {
+  position: fixed !important;
+  top: 16px !important;
+  right: 16px !important;
+  z-index: 2147483647 !important;
+  width: 300px !important;
+  max-width: calc(100vw - 32px) !important;
+  box-sizing: border-box !important;
+  padding: 12px 14px !important;
+  border-radius: 12px !important;
+  background: #1c1230 !important;
+  color: #f5f3fb !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-left: 4px solid #8b5cf6 !important;
+  text-align: left !important;
+  animation: komplexai-in 140ms ease-out !important;
+}
+
+@keyframes komplexai-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.komplexai-toast--flag  { border-left-color: #ef4444 !important; }
+.komplexai-toast--clean { border-left-color: #22c55e !important; }
+.komplexai-toast--error { border-left-color: #f59e0b !important; }
+.komplexai-toast--loading { border-left-color: #8b5cf6 !important; }
+
+.komplexai-toast__header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 6px !important;
+}
+
+.komplexai-toast__brand {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: #c4b5fd !important;
+}
+
+.komplexai-toast__close {
+  all: unset !important;
+  cursor: pointer !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+  color: #cbc5da !important;
+  padding: 0 4px !important;
+}
+.komplexai-toast__close:hover { color: #ffffff !important; }
+
+.komplexai-toast__body { color: #f5f3fb !important; }
+
+.komplexai-toast__score {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  margin-bottom: 2px !important;
+  color: #ffffff !important;
+}
+
+.komplexai-toast__regime {
+  font-size: 13px !important;
+  color: #d6cfe6 !important;
+}
+
+.komplexai-toast__title {
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin-bottom: 2px !important;
+}
+
+.komplexai-toast__msg {
+  font-size: 13px !important;
+  color: #e7e2f2 !important;
+}
+
+.komplexai-toast__hint {
+  margin-top: 8px !important;
+  font-size: 11px !important;
+  color: #a79fc0 !important;
+}

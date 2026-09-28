@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Packaged builds
+*.zip
+*.crx
+*.pem
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/

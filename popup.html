@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Komplex AI — Hallucination Check</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <img src="icons/icon.svg" alt="" class="logo" width="24" height="24" />
+    <div>
+      <h1>Hallucination Check</h1>
+      <p class="subtitle">by Komplex AI</p>
+    </div>
+  </header>
+
+  <main>
+    <label for="text" class="label">Paste an LLM answer to score</label>
+    <textarea id="text" placeholder="Paste text here (English, up to 2,048 characters)…" maxlength="2048"></textarea>
+    <div class="row">
+      <span id="count" class="count">0 / 2048</span>
+      <button id="check" class="btn">Check</button>
+    </div>
+
+    <div id="result" class="result" hidden></div>
+
+    <p class="tip">Tip: on any page you can select text, right-click, and choose
+      <em>“Check for hallucination with Komplex AI.”</em></p>
+  </main>
+
+  <footer class="footer">
+    <p class="limits">
+      Probabilistic signal — not a fact-checker. English natural-language only,
+      up to 2,048 chars. No data retention. First call after idle may take
+      10–30s (cold start).
+    </p>
+    <div class="links">
+      <a id="getKey" href="https://detector.komplexai.io/account/keys" target="_blank" rel="noopener">Get a free API key</a>
+      <a id="openOptions" href="#">Set API key</a>
+    </div>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
